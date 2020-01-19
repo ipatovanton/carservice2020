@@ -25,6 +25,8 @@ jQuery(function() {
     $('.attachinary-input').attachinary();
 
     $("#services").sortable({
+      axis: 'y',
+      handle: '.item-move',
       update: function(e, ui) {
         Rails.ajax({
           url: $(this).data("url"),
