@@ -1,0 +1,8 @@
+<div class="margin-top-20"></div>
+<div class="form-container">
+  <h4 class="center">Редактирование</h4>
+  <%= render 'form' %>
+  <div class="margin-top-20">
+  	<%= link_to 'Удалить', @service, class: 'btn btn-w', confirm: 'Вы уверенны?', method: :delete %>
+  </div>
+</div>

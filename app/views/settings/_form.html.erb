@@ -1,0 +1,40 @@
+<%= form_for(@setting, html: { role: 'form' }) do |f| %>
+  <div class="form-group">
+    <h5>Логотип</h5>
+    <%= f.attachinary_file_field :image, as: :attachinary, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <h5>Название сайта</h5>
+    <%= f.text_field :title, class: 'form-control', required: true, placeholder: 'Название' %>
+  </div>
+  <div class="form-group">
+    <h5>Описание сайта</h5>
+    <%= f.text_area :description, class: 'form-control', placeholder: 'Описание' %>
+  </div>
+
+  <div class="form-group">
+    <h5>Телефонный номер</h5>
+    <%= f.text_field :phone, class: 'form-control', placeholder: 'Телефонный номер' %>
+  </div>
+
+  <div class="form-group">
+    <h5>Whatsapp</h5>
+    <%= f.text_field :whatsapp, class: 'form-control', placeholder: 'WhatsAPP' %>
+  </div>
+
+  <div class="form-group">
+    <h5>Viber</h5>
+    <%= f.text_field :viber, class: 'form-control', placeholder: 'Viber' %>
+  </div>
+
+  <div class="form-group">
+    <h5>Telegram</h5>
+    <%= f.text_field :telegram, class: 'form-control', placeholder: 'Telegram' %>
+  </div>
+  
+  <div class="form-group">
+    <%= f.submit 'Сохранить', data: { disable_with: 'Сохраняем...' }, class: 'btn btn-s' %>
+    <%= link_to 'Назад', admin_path, class: 'btn btn-d' %>
+  </div>
+<% end %>

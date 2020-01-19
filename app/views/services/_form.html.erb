@@ -1,0 +1,38 @@
+<%= form_for(@service, html: { role: 'form' }) do |f| %>
+
+  <div class="form-group">
+    <%= f.attachinary_file_field :image, as: :attachinary, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.text_field :title, class: 'form-control', required: true, placeholder: 'Название' %>
+  </div>
+  <div class="form-group">
+    <%= f.text_area :description, class: 'form-control', placeholder: 'Описание' %>
+  </div>
+
+  <div class="form-group">
+    <h5>Цвет фона</h5>
+    <div class="theme-check">
+      <label class="theme-check-label grey-theme">
+        <%= f.radio_button :backgroundcolor, 'grey-theme', checked: true, class: 'theme-check-input' %>
+        <span class="checkmark"></span>
+      </label>
+
+      <label class="theme-check-label green-theme">
+        <%= f.radio_button :backgroundcolor, 'green-theme', class: 'theme-check-input' %>
+        <span class="checkmark"></span>
+      </label>
+
+      <label class="theme-check-label red-theme">
+        <%= f.radio_button :backgroundcolor, 'red-theme', class: 'theme-check-input' %>
+        <span class="checkmark"></span>
+      </label>
+    </div>
+  </div>
+  
+  <div class="form-group">
+    <%= f.submit 'Сохранить', data: { disable_with: 'Сохраняем...' }, class: 'btn btn-s' %>
+    <%= link_to 'Назад', admin_path, class: 'btn btn-d' %>
+  </div>
+<% end %>

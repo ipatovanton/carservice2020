@@ -1,0 +1,33 @@
+<div class="nav">
+	<%= link_to 'Редактировать', edit_service_path, class: 'btn btn-d' %>
+	<%= link_to 'Назад', admin_path, class: 'btn btn-d' %>
+</div>
+<div class="admin">
+	<h4><%= @service.title %></h4>
+	<div class="margin-top-20">
+		<% @items.each do |item| %>
+			<div class="prices">
+				<div class="price-title">
+					<%= item.title %>
+				</div>
+				<div class="price-cost">
+					<%= item.price %>
+					<%= link_to 'X', service_item_path(@service, item), confirm: 'Вы уверенны?', method: :delete, class: 'btn btn-w btn-small' %>
+				</div>
+			</div>
+		<% end %>
+	</div>
+	<div class="margin-top-20">
+		<%= form_for([@service, Item.new], html: { role: 'form' }) do |f| %>
+      <div class="form-group">
+        <%= f.text_field :title, class: 'form-control', required: true, placeholder: 'Название' %>
+      </div>
+      <div class="form-group">
+        <%= f.text_field :price, class: 'form-control', placeholder: 'Стоимость' %>
+      </div>
+      <div class="form-group">
+        <%= f.submit 'Добавить услугу', data: { disable_with: 'Сохраняем...' }, class: 'btn btn-s' %>
+      </div>
+    <% end %>
+	</div>
+</div>

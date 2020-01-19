@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title><%= Setting.first.title %></title>
+    <meta name="description" content="<%= Setting.first.description %>" />
+
+    <meta property="og:title" content="<%= Setting.first.title %>" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="<%= request.original_url %>" />
+    <meta property="og:description" content="<%= Setting.first.description %>" />
+    <meta property="og:site_name" content="<%= Setting.first.title %>" />
+
+    <%= csrf_meta_tags %>
+    <link href="https://fonts.googleapis.com/css?family=Lobster&display=swap&subset=cyrillic,cyrillic-ext" rel="stylesheet">
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= cloudinary_js_config %>
+    <% if Setting.first.script.present? %>
+      <%= Setting.first.script %>
+    <% end %>
+  </head>
+
+  <body>
+    <div class="container">
+      <%= yield %>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,22 @@
+<div class="nav">
+	<%= link_to 'Настройки', edit_setting_path(@setting), class: 'btn btn-d' %>
+	<%= link_to 'Выход', destroy_user_session_path, method: :delete, class: 'btn btn-d' %>
+</div>
+
+<div class="admin">
+	<h4>Категории</h4>
+	<div class="margin-top-10">
+		<%= link_to 'Добавить категорию', new_service_path, class: 'btn btn-s' %>
+	</div>
+	<div class="margin-top-20">
+		<div id="services" data-url="<%= sort_pages_path %>">
+			<% @services.each do |service| %>
+				<div id="service_<%= service.id %>">
+					<div class="admin-service">
+						<h4>↕ <%= link_to service.title, service, class: 'underline' %></h4>
+					</div>
+				</div>
+			<% end %>
+		</div>
+	</div>
+</div>
