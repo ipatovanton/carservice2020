@@ -10,6 +10,10 @@
 </a>
 
 <div class="price" id="<%= service.id %>">
+	<div class="price-text"><%= service.title %></div>
+	<% if service.description.present? %>
+		<div class="price-description"><%= service.description %></div>
+	<% end %>
 	<div class="contacts">
 		<% if Setting.present? %>
 			<% if Setting.first.phone.present? %>
@@ -48,10 +52,6 @@
 			<% end %>
 		</div>
 	</div>
-	<div class="price-text"><%= service.title %></div>
-	<% if service.description.present? %>
-		<div class="price-description"><%= service.description %></div>
-	<% end %>
 	<div class="margin-top-20">
 		<% service.items.each do |item| %>
 			<div class="prices">
