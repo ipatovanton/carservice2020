@@ -457,14 +457,17 @@ input[type="checkbox"] {
 }
 .price-title,
 .price-cost {
-  text-align: left;
   font-weight: 400;
   line-height: 1.4;
   font-size: 16px;
   color: #222;
   word-wrap: break-word;
 }
+.price-title {
+  text-align: left;
+}
 .price-cost {
+  text-align: right;
   font-weight: 600;
   margin-left: 10px;
 }
