@@ -1,5 +1,3 @@
-/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.23, autoprefixer: v9.7.3) */
-
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -265,7 +263,8 @@ input[type="checkbox"] {
 }
 
 
-* Theme icons */
+/* Theme icons */
+
 .theme-check {
   display: block;
   max-width: 100%;
@@ -444,9 +443,15 @@ input[type="checkbox"] {
   margin-top: 10px;
 }
 .prices {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 10px 0;
   margin-bottom: 10px;
 }
@@ -465,9 +470,15 @@ input[type="checkbox"] {
 }
 
 .nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-top: 20px;
 }
 
@@ -492,7 +503,9 @@ input[type="checkbox"] {
 
 @supports ((display: -ms-grid) or (display: grid)) {
   .services {
+    display: -ms-grid;
     display: grid;
+    -ms-grid-columns: 1fr 10px 1fr;
     grid-template-columns: 1fr 1fr;
     grid-gap: 10px;
   }
