@@ -1,6 +1,7 @@
 <%= form_for(@service, html: { role: 'form' }) do |f| %>
 
   <div class="form-group">
+    <h5>Логотип</h5>
     <%= f.attachinary_file_field :image, as: :attachinary, class: 'form-control' %>
   </div>
 
