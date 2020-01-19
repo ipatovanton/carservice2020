@@ -14,7 +14,19 @@
 	<% if service.description.present? %>
 		<div class="price-description"><%= service.description %></div>
 	<% end %>
-	<div class="contacts">
+	<div class="margin-top-20">
+		<% service.items.each do |item| %>
+			<div class="prices">
+				<div class="price-title">
+					<%= item.title%>
+				</div>
+				<div class="price-cost">
+					<%= item.price %>₽
+				</div>	
+			</div>
+		<% end %>
+	</div>
+		<div class="contacts">
 		<% if Setting.present? %>
 			<% if Setting.first.phone.present? %>
 				<div class="phone">
@@ -51,17 +63,5 @@
 				<% end %>
 			<% end %>
 		</div>
-	</div>
-	<div class="margin-top-20">
-		<% service.items.each do |item| %>
-			<div class="prices">
-				<div class="price-title">
-					<%= item.title%>
-				</div>
-				<div class="price-cost">
-					<%= item.price %>₽
-				</div>	
-			</div>
-		<% end %>
 	</div>
 </div>
