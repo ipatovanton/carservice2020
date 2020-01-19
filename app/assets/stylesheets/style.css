@@ -480,6 +480,8 @@ input[type="checkbox"] {
           box-shadow: 0 0 3px #f5f5f5;
 }
 
+
+
 .grey-theme {
   background: #f5f5f5;
   color: #222;
@@ -593,6 +595,24 @@ input[type="checkbox"] {
   border-radius: 12px;
   padding: 10px;
   margin: 10px 0;
+  width: 100%;
+}
+
+.item-inline {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.coursor {
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  padding: 10px 15px;
+  margin-right: 5px;
+  cursor: pointer;
 }
 .margin-top-10 {
   margin-top: 10px;

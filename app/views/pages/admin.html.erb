@@ -14,8 +14,13 @@
 		<div id="services" data-url="<%= sort_pages_path %>">
 			<% @services.each do |service| %>
 				<div id="service_<%= service.id %>">
-					<div class="admin-service">
-						<h4>↕ <%= link_to service.title, service, class: 'underline' %></h4>
+					<div class="item-inline">
+						<div class="item-item coursor">
+							<h4>↕</h4>
+						</div>
+						<div class="item-item admin-service">
+							<%= link_to service.title, service, class: 'underline' %></h4>
+						</div>
 					</div>
 				</div>
 			<% end %>
