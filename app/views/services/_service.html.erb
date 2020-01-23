@@ -15,40 +15,32 @@
 		<div class="price-description"><%= service.description %></div>
 	<% end %>
 	<div class="contacts">
-		<% if Setting.present? %>
-			<% if Setting.first.phone.present? %>
-				<div class="phone">
-					<%= number_to_phone(Setting.first.phone, area_code: true) %>
-				</div>
-			<% end %>
+		<% if Setting.first.phone.present? %>
+			<div class="phone">
+				<%= number_to_phone(Setting.first.phone, area_code: true) %>
+			</div>
 		<% end %>
 		<div class="social-flex">
-			<% if Setting.present? %>
-				<% if Setting.first.whatsapp.present? %>
-					<a target="_blank" href="https://wa.me/<%= Setting.first.whatsapp %>">
-						<div class="social">
-							<%= image_tag 'whatsapp.png', class: 'image' %>
-						</div>
-					</a>
-				<% end %>
+			<% if Setting.first.whatsapp.present? %>
+				<a target="_blank" href="https://wa.me/<%= Setting.first.whatsapp %>">
+					<div class="social">
+						<%= image_tag 'whatsapp.png', class: 'image' %>
+					</div>
+				</a>
 			<% end %>
-			<% if Setting.present? %>
-				<% if Setting.first.viber.present? %>
-					<a target="_blank" href="viber://chat&number=<%= Setting.first.viber %>">
-						<div class="social">
-							<%= image_tag 'viber.png', class: 'image' %>
-						</div>
-					</a>
-				<% end %>
+			<% if Setting.first.viber.present? %>
+				<a target="_blank" href="viber://chat&number=<%= Setting.first.viber %>">
+					<div class="social">
+						<%= image_tag 'viber.png', class: 'image' %>
+					</div>
+				</a>
 			<% end %>
-			<% if Setting.present? %>
-				<% if Setting.first.telegram.present? %>
-					<a target="_blank" href="tg://resolve?domain=<%= Setting.first.telegram %>">
-						<div class="social">
-							<%= image_tag 'telegram.png', class: 'image' %>
-						</div>
-					</a>
-				<% end %>
+			<% if Setting.first.telegram.present? %>
+				<a target="_blank" href="tg://resolve?domain=<%= Setting.first.telegram %>">
+					<div class="social">
+						<%= image_tag 'telegram.png', class: 'image' %>
+					</div>
+				</a>
 			<% end %>
 		</div>
 	</div>
@@ -64,41 +56,33 @@
 			</div>
 		<% end %>
 	</div>
-		<div class="contacts">
-		<% if Setting.present? %>
-			<% if Setting.first.phone.present? %>
-				<div class="phone">
-					<%= number_to_phone(Setting.first.phone, area_code: true) %>
-				</div>
-			<% end %>
+	<div class="contacts">
+		<% if Setting.first.phone.present? %>
+			<div class="phone">
+				<%= number_to_phone(Setting.first.phone, area_code: true) %>
+			</div>
 		<% end %>
 		<div class="social-flex">
-			<% if Setting.present? %>
-				<% if Setting.first.whatsapp.present? %>
-					<a target="_blank" href="https://wa.me/<%= Setting.first.whatsapp %>">
-						<div class="social">
-							<%= image_tag 'whatsapp.png', class: 'image' %>
-						</div>
-					</a>
-				<% end %>
+			<% if Setting.first.whatsapp.present? %>
+				<a target="_blank" href="https://wa.me/<%= Setting.first.whatsapp %>">
+					<div class="social">
+						<%= image_tag 'whatsapp.png', class: 'image' %>
+					</div>
+				</a>
 			<% end %>
-			<% if Setting.present? %>
-				<% if Setting.first.viber.present? %>
-					<a target="_blank" href="viber://chat&number=<%= Setting.first.viber %>">
-						<div class="social">
-							<%= image_tag 'viber.png', class: 'image' %>
-						</div>
-					</a>
-				<% end %>
+			<% if Setting.first.viber.present? %>
+				<a target="_blank" href="viber://chat&number=<%= Setting.first.viber %>">
+					<div class="social">
+						<%= image_tag 'viber.png', class: 'image' %>
+					</div>
+				</a>
 			<% end %>
-			<% if Setting.present? %>
-				<% if Setting.first.telegram.present? %>
-					<a target="_blank" href="tg://resolve?domain=<%= Setting.first.telegram %>">
-						<div class="social">
-							<%= image_tag 'telegram.png', class: 'image' %>
-						</div>
-					</a>
-				<% end %>
+			<% if Setting.first.telegram.present? %>
+				<a target="_blank" href="tg://resolve?domain=<%= Setting.first.telegram %>">
+					<div class="social">
+						<%= image_tag 'telegram.png', class: 'image' %>
+					</div>
+				</a>
 			<% end %>
 		</div>
 	</div>
