@@ -39,7 +39,7 @@ class SettingsController < ApplicationController
 
   private
     def setting_params
-      params.require(:setting).permit(:title, :description, :image, :phone, :telegram, :whatsapp, :viber, :script, :seotitle, :seodescription)
+      params.require(:setting).permit(:title, :description, :image, :phone, :telegram, :whatsapp, :viber, :seotitle, :seodescription)
     end
 
     def admin_user

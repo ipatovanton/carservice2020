@@ -13,7 +13,6 @@ class Setting
   field :seotitle, type: String, default: 'Подорожник'
   field :seodescription, type: String, default: 'СРОЧНАЯ ТЕХНИЧЕСКАЯ ПОМОЩЬ ЗА 20 МИНУТ'
 
-  field :script
 
   has_attachment :image, accept: [:jpg, :png, :gif]
 
