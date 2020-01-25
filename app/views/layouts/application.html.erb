@@ -13,6 +13,20 @@
     <%= favicon_link_tag 'favicon.ico' %>
     <%= favicon_link_tag 'apple-touch-icon.png', rel: 'apple-touch-icon', type: 'image/png' %>  
     <%= csrf_meta_tags %>
+    <style type="text/css">
+      @font-face {
+        font-family: "Batman";
+        src: url('<%= asset_path '10322.eot' %>'); /* IE9 Compat Modes */
+        src: url('<%= asset_path '10322.eot?#iefix' %>') format("embedded-opentype"), /* IE6-IE8 */
+        url('<%= asset_path '10322.otf' %>') format("opentype"), /* Open Type Font */
+        url('<%= asset_path '10322.svg' %>') format("svg"), /* Legacy iOS */
+        url('<%= asset_path '10322.ttf' %>') format("truetype"), /* Safari, Android, iOS */
+        url('<%= asset_path '10322.woff' %>') format("woff"), /* Modern Browsers */
+        url('<%= asset_path '10322.woff2' %>') format("woff2"); /* Modern Browsers */
+        font-weight: normal;
+        font-style: normal;
+      }
+    </style>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= cloudinary_js_config %>
