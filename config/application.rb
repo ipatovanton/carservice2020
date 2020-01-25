@@ -34,7 +34,7 @@ module Carservice
 
     config.middleware.insert_before 0, Rack::Cors do
       allow do
-        origins '*'
+        origins '*', 'https://d1xb6unwu6rjq8.cloudfront.net'
         resource '*', headers: :any, methods: [:get]
       end
     end
