@@ -7,6 +7,10 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
+@font-face {
+font-family: Batman;
+src: url('<%= asset_path '10322.ttf' %>');
+}
 html {
   height: 100%;
   font-size: 100%;
@@ -421,10 +425,10 @@ input[type="checkbox"] {
 .header-image {
   display: inline-block;
   vertical-align: middle;
-  max-width: 50px;
+  max-width: 60px;
 }
 .header-title {
-  font-family: 'Lobster', cursive;
+  font-family: 'Batman', cursive;
   display: inline-block;
   vertical-align: middle;
   margin-left: 15px;
@@ -619,7 +623,11 @@ input[type="checkbox"] {
 .underline {
   text-decoration: underline;
 }
-
+@media (min-width: 600px) {
+  .header-image {
+    max-width: 90px;
+  }
+}
 @supports ((display: -ms-grid) or (display: grid)) {
   .services {
     display: -ms-grid;
