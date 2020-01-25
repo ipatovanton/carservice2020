@@ -19,6 +19,7 @@ gem 'devise'
 
 gem 'cloudinary'
 gem 'attachinary', :git => 'https://github.com/ipatovanton/attachinary.git', :branch => 'rails5'
+gem 'rack-cors'
 
 gem 'bootsnap', '>= 1.1.0', require: false
 
