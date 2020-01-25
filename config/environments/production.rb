@@ -34,6 +34,9 @@ Rails.application.configure do
   # Enable serving of images, stylesheets, and JavaScripts from an asset server.
   # config.action_controller.asset_host = 'http://assets.example.com'
   config.action_controller.asset_host = Rails.application.credentials.cloudfront
+  config.public_file_server.headers = {
+    'Cache-Control' => 'public, max-age=31536000'
+  }
   # Specifies the header that your server uses for sending files.
   # config.action_dispatch.x_sendfile_header = 'X-Sendfile' # for Apache
   # config.action_dispatch.x_sendfile_header = 'X-Accel-Redirect' # for NGINX
